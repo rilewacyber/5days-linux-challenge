@@ -1,50 +1,99 @@
-# 5days-linux-challenge
-A 5-day hands-on Linux challenge to build foundational command-line skills for cybersecurity.
-# 🐧 5-Day Linux Challenge – By Mariam (aka Rilewa)
 
-Welcome to my 5-day Linux challenge!  
-As part of my journey into cybersecurity and cloud security, I committed to learning and documenting the Linux basics — one day at a time.
+# 🛡️ Linux Challenge - Day 2: Users and Permissions
 
-This repo includes hands-on exercises, command-line practice, tools explored, and reflections for each day.
+In Linux, we have three different permission classes:
+- **Users/Owners (u)**
+- **Groups (g)**
+- **Others (o)**
 
----
+All these can be represented using `a` for all users.
 
-## 🗓️ Challenge Plan
+### 📄 Permissions include:
+- **Read (r)**
+- **Write (w)**
+- **Execute (x)**
 
-| Day | Focus Area                             |
-|-----|----------------------------------------|
-| 1   | Linux Basic commands                   |
-| 2   | Users and permissions                  |
-| 3   | Networking                             |
-| 4   | Processes and Services                 |
-| 5   | Hashing and Integrity                  |
-
-Each day has its own folder with a detailed README:
-- 🧠 What I learned  
-- 🛠️ Commands practiced  
-- 🧩 Challenges faced  
-- 💭 Reflections  
+> Users and groups can have all three permissions (rwx), but it’s not advisable to give full permissions to others.
 
 ---
 
-## 🧑🏽‍💻 Why This Challenge?
+## 🔍 File Permission Overview
 
-As someone transitioning from a non-tech background (Food Science 🎓) into cybersecurity ☁️, I know how important Linux is for security professionals. This challenge is my way of building real skills and learning in public.
+![Viewing File Permissions](./day2-1.png)  
+We navigated to the `Desktop` directory where our `Groceries` file from Day 1 lives. Running `ls -l Groceries` shows something like:
+
+```
+-rw-rw-r-- 1 kali kali ...
+```
+
+- **Users (kali)** → `rw-`: can read and write.
+- **Groups (kali)** → `rw-`: can read and write.
+- **Others** → `r--`: can only read.
 
 ---
 
-## 🔗 Connect with Me
+## 👤 Who Owns the File?
 
-- [LinkedIn](https://linkedin.com/in/mariam-moshood)  
-- [GitHub](https://github.com/rilewacyber)  
-- Email: mariamomoshalewa23@gmail.com
+![Checking File Owner](./day2-2.png)  
+As you can see in the file details (`kali kali`), the first `kali` is the user, and the second is the group.  
+To confirm your username, run:
+
+```bash
+whoami
+```
 
 ---
 
-## 🌟 Let’s Learn Together!
-Feel free to fork this repo, follow along, or drop comments.  
-This is just the beginning. Next up: more labs, cloud security, and hands-on hacking 💥
+## ➕ Adding a New User
 
-#Linux #Cybersecurity #CloudSecurity #WomenInTech #CyberMimi
+![Adding a New User](./day2-3.png)  
+We added a new user with:
 
+```bash
+sudo adduser mariam
+```
 
+To confirm, navigate back to the home directory with `cd ..` and `ls`.
+
+---
+
+## 🔁 Switching Users
+
+![Switch User](./day2-5.png)  
+We switched users using the GUI (Power > Switch User).  
+Then, we confirmed the switch with `whoami`.  
+Note: the new user doesn’t have sudo permission.
+
+---
+
+## ✏️ Editing Permissions with chmod
+
+![Changing Permissions](./day2-7.png)  
+We created a dummy file with:
+
+```bash
+touch test.txt
+```
+
+Then changed permissions like so:
+
+```bash
+chmod u+x test.txt
+chmod g+x test.txt
+chmod o+wx test.txt
+```
+
+---
+
+## ⚠️ Lesson Learned
+
+![Lesson Screenshot](./day2-8.png)  
+We took screenshots under a different user and needed to transfer them back to `kali`. We used:
+
+```bash
+sudo cp /home/mariam/Pictures/filename.png /home/kali/Pictures/
+```
+
+Be precise with spelling, extension, and path.
+
+---
