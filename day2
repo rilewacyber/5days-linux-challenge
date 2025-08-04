@@ -1,1 +1,35 @@
+# 🛡️ Day 2 – Users and Permissions
+
+In Linux, every file or directory is assigned to a user and a group, and has a set of permissions that control who can access or modify it. Understanding this is key to managing security and access control in a Linux system.
+
+---
+
+## 🔐 Permission Classes
+
+There are three main permission classes:
+
+- **User (u)** — The file or directory's owner  
+- **Group (g)** — A group of users with shared access  
+- **Others (o)** — All other users not in the group  
+- **All (a)** — Applies changes to user, group, and others at once
+
+## ✅ Permission Types
+
+Each class can be assigned the following permissions:
+
+- **Read (r)** — View file contents or list directory  
+- **Write (w)** — Modify file contents or directory  
+- **Execute (x)** — Run the file or enter a directory
+
+Users and groups typically have full permissions (`rwx`), but it is not advisable to give the same to others for security reasons.
+
+---
+
+## 📸 `day2-1.png`: Viewing File Permissions
+
+Let’s go to the `Desktop` directory, where we previously created the `Groceries` file (see Day 1).  
+Run:
+
+```bash
+ls
 
