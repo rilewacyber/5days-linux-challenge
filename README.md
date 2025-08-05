@@ -15,8 +15,8 @@ This repo includes hands-on exercises, command-line practice, tools explored, an
 |-----|----------------------------------------|
 | 1   | Linux Basic commands                   |
 | 2   | Users and permissions                  |
-| 3   | Networking                             |
-| 4   | Processes and Services                 |
+| 3   | Processes and services                 |
+| 4   | Networking                             |
 | 5   | Hashing and Integrity                  |
 
 Each day has its own folder with a detailed README:
