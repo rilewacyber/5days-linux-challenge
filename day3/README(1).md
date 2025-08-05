@@ -7,7 +7,7 @@ Today’s focus was on understanding how Linux handles running processes and bac
 
 ## 📸 Screenshots & Explanations
 
-### 🔹 Screenshot: `day3-1.png`
+### (./day3-1.png)
 - **Topic:** Using the `ps` command.
 - I opened Firefox and ran the command `ps`. Surprisingly, the PID for Firefox wasn’t visible, prompting deeper exploration.
 
