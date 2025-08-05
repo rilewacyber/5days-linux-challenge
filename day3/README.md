@@ -1,16 +1,16 @@
 # 📅 Day 3 of Linux Challenge: Processes and Services
 
-## 📸 Screenshot: day3-1.png
+## day3-1.png
 We started off by running the `ps` command after opening Firefox. While this command shows currently running processes by the user, it didn’t display the PID (Process ID) for Firefox.
 
 ---
 
-## 📸 Screenshot: day3-2.png
+## day3-2.png
 Next, we ran `ps aux`, which displays all processes running on the system (including other users). Firefox still wasn’t listed clearly, which led us to a better approach.
 
 ---
 
-## 📸 Screenshot: day3-4.png
+## day3-4.png
 We used the command `pgrep -a firefox` to find the exact PID for Firefox.  
 To stop the process, we ran:
 
@@ -23,7 +23,7 @@ The `-9` flag sends the `SIGKILL` signal, which forcefully stops the process imm
 
 ---
 
-## 📸 Screenshot: day3-5.png
+## day3-5.png
 To view all services running on the machine (including background ones), we used:
 
 ```bash
@@ -34,7 +34,7 @@ The output refreshes continuously and shows both active and sleeping processes.
 
 ---
 
-## 📸 Screenshot: day3-6.png
+## day3-6.png
 For a more user-friendly, interactive version, we ran:
 
 ```bash
@@ -47,7 +47,7 @@ It displays processes in color with an easy-to-navigate interface.
 
 ---
 
-## 📸 Screenshot: day3-7.png
+## day3-7.png
 We explored system services using:
 
 ```bash
@@ -58,7 +58,7 @@ This command shows all services loaded on the system — including those that ar
 
 ---
 
-## 📸 Screenshot: day3-8.png
+## day3-8.png
 To start the SSH service, we ran:
 
 ```bash
@@ -75,7 +75,7 @@ If successful, the status will say **active (running)**.
 
 ---
 
-## 📸 Screenshot: day3-9.png
+## day3-9.png
 To verify SSH is open and listening on the right port (22), we scanned the localhost using:
 
 ```bash
@@ -88,7 +88,7 @@ You should see **port 22 open**, which means the SSH service is up.
 
 ---
 
-## 📸 Screenshot: day3-11.png
+## day3-11.png
 To stop SSH:
 
 ```bash
