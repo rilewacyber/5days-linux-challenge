@@ -1,6 +1,7 @@
 # 🧠 Day 4: Networking
 
-## 🖼️ `day4-1.png`
+## 🔍 'Viewing IP Address and Subnet Info
+`
 
 To find your IP address, use the command:
 ```bash
@@ -18,7 +19,7 @@ You’ll find the interface `eth0`, which shows your router’s IP address and t
 
 ---
 
-## 🖼️ `day4-2.png`
+##  📡' Scanning IP Addresses on Network (ARP Scan)`
 
 We can scan the IP addresses within our network using ARP scan.
 
@@ -36,7 +37,7 @@ This will display all the devices connected to your local router.
 
 ---
 
-## 🖼️ `day4-3.png`
+##  🌐 'DNS Lookup with Dig`
 
 To fetch DNS information, use the `dig` command.
 
@@ -50,7 +51,7 @@ This displays the DNS (Domain Name System) records for the domain `google.com`.
 
 ---
 
-## 🖼️ `day4-4.png`
+## 🔎 'Nmap and Ping for Localhost Scanning`
 
 We run a **safe** Nmap scan on ourselves (our localhost). Please never scan a domain or IP you do not have permission to scan.
 
@@ -76,7 +77,7 @@ ping -c5 google.com
 
 ---
 
-## 🖼️ `day4-5.png`
+## 🛣️ 'Tracing the Route to Google`
 
 We trace the route your IP packets take before reaching Google using:
 
